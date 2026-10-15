@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Work | D2P Africa Hub</title>
+<style>
+:root{--ink:#10222e;--lagoon:#0f7c80;--ochre:#e3a32b;--paper:#ffffff;--sage:#f4f8f7;--text:#1c2b35;--muted:#566873;--line:#e4ebe9;--sh:0 6px 20px rgba(16,34,46,.09),0 1px 3px rgba(16,34,46,.07);--card:#fff;--hero1:#10222e;--hero2:#0f5c63;
+--serif:Georgia,"Iowan Old Style","Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--paper:#0c161d;--sage:#122029;--text:#e6eef1;--muted:#9bb0ba;--line:#243845;--card:#12202a;--ink:#e6eef1;--lagoon:#46c2c6;--sh:0 6px 20px rgba(0,0,0,.45)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font:1.0625rem/1.65 var(--sans)}
+a{color:var(--lagoon)}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.w{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--ink);margin:0 0 .6rem}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}h3{font-size:1.2rem}
+.sec{padding:4.5rem 0}.alt{background:var(--sage)}
+.lede{max-width:62ch;color:var(--muted);font-size:1.15rem}
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:#10222e;color:#fff;padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem}
+.brand{font:700 1.3rem var(--serif);color:#fff;text-decoration:none}.brand b{color:var(--ochre)}
+nav.main{display:flex;gap:1.3rem;align-items:center}nav.main a{color:#dbe7ea;text-decoration:none;font-size:.95rem}
+nav.main a:hover{color:#fff}
+.join{background:var(--ochre);color:#10222e!important;padding:.45rem 1rem;border-radius:999px;font-weight:700}
+.mb{display:none;background:none;border:1px solid #6b8591;color:#fff;border-radius:6px;padding:.35rem .8rem;font:inherit}
+.util{background:#0a1820;color:#9fb6bf;font-size:.82rem}.util .w{display:flex;justify-content:flex-end;gap:1.2rem;padding-top:.3rem;padding-bottom:.3rem}
+.util a,.util button{color:#9fb6bf;text-decoration:none;background:none;border:0;font:inherit;cursor:pointer}
+@media(max-width:860px){.mb{display:block}nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#10222e;flex-direction:column;align-items:flex-start;padding:1rem 1.25rem 1.5rem}nav.main.open{display:flex}}
+/* hero */
+.hero{background:radial-gradient(900px 400px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:4.5rem 0 3rem}
+.hero h1{color:#fff;font-size:clamp(2.3rem,6vw,4.2rem);max-width:15ch;letter-spacing:-.01em}
+.hero .tag{font:italic 1.35rem var(--serif);color:var(--ochre);margin:.2rem 0 1rem}
+.hero p.lede{color:#c9dadf}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--ochre);color:#10222e;border:2px solid var(--ochre);margin:.3rem .5rem .3rem 0}
+.btn.o{background:transparent;color:#fff;border-color:#8fb0b8}
+/* pipeline */
+.pipe{margin-top:3rem}
+.rail{display:flex;list-style:none;margin:0;padding:0;overflow-x:auto;gap:0;scrollbar-width:thin}
+.rail li{flex:1 0 108px;position:relative;text-align:center}
+.rail li:not(:last-child)::after{content:"";position:absolute;top:1.35rem;left:50%;width:100%;height:2px;background:#4b7c85}
+.rail button{position:relative;z-index:1;background:none;border:0;color:#c9dadf;font:inherit;font-size:.88rem;cursor:pointer;padding:0 .2rem;width:100%}
+.rail .dot{display:grid;place-items:center;width:2.7rem;height:2.7rem;margin:0 auto .4rem;border-radius:50%;background:#10222e;border:2px solid #4b7c85;font-weight:700;color:#fff}
+.rail button[aria-selected=true] .dot{background:var(--ochre);border-color:var(--ochre);color:#10222e;transform:scale(1.12)}
+.rail button[aria-selected=true]{color:#fff;font-weight:700}
+.panel{margin-top:1.4rem;background:#ffffff14;border:1px solid #ffffff2e;border-radius:12px;padding:1.1rem 1.4rem;min-height:5.5rem}
+.panel strong{font:600 1.2rem var(--serif);color:var(--ochre)}.panel p{margin:.3rem 0 0;color:#e8f1f3}
+/* two col */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:800px){.cols{grid-template-columns:1fr;gap:1.5rem}}
+.why p{border-left:4px solid var(--ochre);padding-left:1rem;margin:0 0 1.1rem}
+.does{list-style:none;padding:0;margin:0}.does li{padding:.55rem 0 .55rem 1.8rem;border-bottom:1px solid var(--line);position:relative}
+.does li::before{content:"\2713";position:absolute;left:0;color:var(--lagoon);font-weight:700}
+.not{background:var(--card);color:var(--text);border-left:6px solid var(--ochre);border-radius:12px;padding:1.5rem;box-shadow:var(--sh)}.not h3{color:var(--ink)}.not strong{color:var(--ink)}
+/* pillars */
+.pl{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:800px){.pl{grid-template-columns:1fr}}
+.pl li{display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.4rem;background:var(--card);border-radius:12px;box-shadow:var(--sh);border-top:4px solid var(--lagoon)}
+.pl .n{font:700 2.4rem/1 var(--serif);color:var(--lagoon)}
+.pl h3{margin-bottom:.2rem}.pl p{margin:0;color:var(--muted)}
+.pl a{text-decoration:none;color:inherit}.pl a:hover h3{color:var(--lagoon)}
+/* nodes */
+.nodes{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:900px){.nodes{grid-template-columns:1fr 1fr}}@media(max-width:560px){.nodes{grid-template-columns:1fr}}
+.node{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--lagoon);border-radius:12px;padding:1.3rem;box-shadow:var(--sh);text-decoration:none;color:var(--text)}
+.node h3{font-size:1.5rem}.node small{color:var(--muted)}
+.node.next{border:2px dashed var(--lagoon);border-top-width:2px;box-shadow:none;background:var(--sage)}
+.badge{display:inline-block;font-size:.78rem;background:var(--sage);border-radius:999px;padding:.1rem .7rem;margin-bottom:.5rem}
+/* outputs */
+.outs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+@media(max-width:860px){.outs{grid-template-columns:1fr}}
+.out{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;box-shadow:var(--sh)}
+.out p{margin:.3rem 0;color:var(--muted)}.meta{font-size:.85rem;color:var(--muted)}
+/* vision */
+.vision{background:var(--paper)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+@media(max-width:760px){.stats{grid-template-columns:1fr}}
+.stats>div{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--sh);border-bottom:5px solid var(--ochre)}
+.stats strong{display:block;font:700 clamp(2.4rem,5vw,3.4rem)/1 var(--serif);color:var(--lagoon)}
+.stats span{color:var(--muted)}
+/* governance */
+.gov{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:900px){.gov{grid-template-columns:1fr 1fr}}@media(max-width:560px){.gov{grid-template-columns:1fr}}
+.gov div{border-left:4px solid var(--ochre);background:var(--card);padding:1.1rem 1.2rem;border-radius:0 12px 12px 0;box-shadow:var(--sh)}
+.gov h3{font-size:1.05rem}.gov p{margin:0;font-size:.95rem;color:var(--muted)}
+/* footer */
+.news{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center}
+@media(max-width:800px){.news{grid-template-columns:1fr}}
+.news form{display:flex;gap:.5rem;flex-wrap:wrap}
+.news input{box-shadow:var(--sh);flex:1 1 220px;padding:.8rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.news button{border:0;cursor:pointer;font:inherit;font-weight:700}
+#ok{color:var(--lagoon);font-weight:600;min-height:1.5rem}
+.logos{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}.logos span{border:1px dashed var(--line);border-radius:8px;padding:.6rem 1.2rem;background:var(--card);box-shadow:var(--sh);color:var(--muted);font-size:.9rem}
+footer{background:#0a1820;color:#9fb6bf;padding:2.5rem 0 calc(2rem + env(safe-area-inset-bottom,0px));font-size:.92rem}
+footer .f{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
+@media(max-width:800px){footer .f{grid-template-columns:1fr 1fr}}
+footer a{color:#cfe0e4;display:block;text-decoration:none;margin:.25rem 0}footer h3{color:#fff;font:600 1rem var(--sans)}
+footer .ow{border-top:1px solid #1f3743;margin-top:1.5rem;padding-top:1rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.ph{background:radial-gradient(900px 360px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:3.5rem 0 2.5rem}
+.ph h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:18ch}.ph .lede{color:#c9dadf}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chips a{color:#fff;text-decoration:none;border:1px solid #8fb0b8;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}.chips a:hover{background:#ffffff22}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.6rem;box-shadow:var(--sh);border-top:5px solid var(--lagoon)}.cd.g{border-top-color:var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}
+.big{font:italic 600 clamp(1.6rem,4vw,2.5rem)/1.25 var(--serif);color:var(--ink);border-left:6px solid var(--ochre);padding-left:1.2rem;margin:1.5rem 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.three{grid-template-columns:1fr}}
+.chain{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;counter-reset:s}@media(max-width:860px){.chain{grid-template-columns:1fr 1fr}}@media(max-width:560px){.chain{grid-template-columns:1fr}}
+.chain div{background:var(--card);border-radius:12px;padding:1.1rem 1.2rem;box-shadow:var(--sh)}.chain b{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--lagoon);color:#fff;margin-right:.5rem;font-size:.9rem}
+.chain h3{display:flex;align-items:center;font-size:1.05rem}.chain p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+.pc{background:var(--card);border-radius:12px;padding:1.4rem;box-shadow:var(--sh);border-top:4px solid var(--lagoon)}.pc ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}.pc p{margin:.3rem 0;color:var(--text)}.pc small{color:var(--lagoon);font-weight:700}
+.tree{display:grid;gap:.8rem;margin-top:2rem}.tree .row{display:grid;gap:.8rem}.tree .r2{grid-template-columns:1fr 1fr}.tree .r1{grid-template-columns:minmax(0,520px);justify-content:center}.tree .r3{grid-template-columns:minmax(0,520px);justify-content:center}
+@media(max-width:700px){.tree .r2{grid-template-columns:1fr}}
+.tree .cd{text-align:center}.tree .cd.g{background:var(--paper)}
+.stp{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem;counter-reset:q}@media(max-width:860px){.stp{grid-template-columns:1fr}}
+.cta{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:2.5rem;margin:0 0 4rem}.cta h2{color:#fff}.cta p{color:#c9dadf;max-width:60ch}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+
+.ow{background:radial-gradient(900px 360px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:3.5rem 0 2.5rem}
+.ow h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:18ch}.ow .lede{color:#c9dadf}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chips a{color:#fff;text-decoration:none;border:1px solid #8fb0b8;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}.chips a:hover{background:#ffffff22}
+.map{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:12px;box-shadow:var(--sh);overflow:hidden;margin-top:1.5rem;font-size:.95rem}
+.mw{overflow-x:auto}.map th,.map td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--line)}.map th{background:var(--sage);color:var(--ink)}.map tr:last-child td{border-bottom:0}
+.pr{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:2rem;border-top:6px solid var(--lagoon)}
+.ph2{display:flex;gap:1.2rem;align-items:flex-start;flex-wrap:wrap}.num{font:700 3.6rem/1 var(--serif);color:var(--lagoon)}
+.steps{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0}.steps span{background:var(--sage);border-radius:999px;padding:.1rem .8rem;font-size:.82rem;color:var(--ink)}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}@media(max-width:800px){.g4{grid-template-columns:1fr}}
+.g4 h3{font-size:1.05rem;color:var(--lagoon)}.g4 p,.g4 ul{margin:.2rem 0 0}.g4 ul{padding-left:1.1rem}.g4 li{margin:.2rem 0}
+.rel{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line);display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.draft{font-size:.85rem;color:var(--muted)}
+.together{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.together{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--sh);border-top:5px solid var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}
+.cta{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:2.5rem;margin:0 0 4rem}.cta h2{color:#fff}.cta p{color:#c9dadf;max-width:60ch}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="w bar">
+  <a class="brand" href="index.html">D2P <b>Africa Hub</b></a>
+  <button class="mb" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="main" id="nav" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="Work.html" aria-current="page" style="color:#fff;border-bottom:2px solid var(--ochre)">Our Work</a>
+   <a href="Africa_Hub.html">Country Nodes</a>
+   <a href="Resources.html">Resources</a>
+   <a href="Events.html">News and Events</a>
+   <a href="About.html">About</a>
+   <a href="#data">Login</a>
+  </nav>
+ </div>
+</header>
+<main id="top">
+<section class="ow"><div class="w">
+ <h1>Our work: six pillars, one pipeline</h1>
+ <p class="lede">Our five-year strategy turns the D2P model into six areas of work. Each one supports country teams at specific steps between data and decisions, always under national ownership.</p>
+ <nav class="chips" aria-label="Pillars"><a href="#p1">Pillar 1</a><a href="#p2">Pillar 2</a><a href="#p3">Pillar 3</a><a href="#p4">Pillar 4</a><a href="#p5">Pillar 5</a><a href="#p6">Pillar 6</a></nav>
+</div></section>
+
+<section class="sec" id="how"><div class="w">
+ <h2>How the pillars fit the D2P model</h2>
+ <p class="lede">The nine steps of the model run from data to learning. Each pillar strengthens the steps shown below.</p>
+ <div class="mw"><table class="map"><thead><tr><th>Pillar</th><th>D2P steps it supports</th></tr></thead><tbody><tr><td><a href="#p1">1. Data for Decision-Making</a></td><td>Data · Analysis</td></tr><tr><td><a href="#p2">2. Evidence Generation and Synthesis</a></td><td>Analysis · Evidence</td></tr><tr><td><a href="#p3">3. Evidence-to-Policy Translation</a></td><td>Policy options · Policy dialogue</td></tr><tr><td><a href="#p4">4. Health Policy and Regulation</a></td><td>Decision or regulation · Implementation</td></tr><tr><td><a href="#p5">5. Capacity Development</a></td><td>All steps</td></tr><tr><td><a href="#p6">6. Digital Knowledge and Learning</a></td><td>Monitoring · Learning</td></tr></tbody></table></div>
+ <p class="note">The mapping is indicative. In practice the pillars overlap and reinforce each other.</p>
+</div></section>
+<section class="sec" id="p1"><div class="w"><div class="pr">
+<div class="ph2"><span class="num">1</span><div><h2 style="margin:0">Data for Decision-Making</h2><div class="steps"><span>Data</span><span>Analysis</span></div></div></div>
+<div class="g4"><div><h3>Objective</h3><p>Help countries get the right data, in usable form, to the people who make decisions.</p></div><div><h3>Why it matters</h3><p>Routine and survey data are often fragmented, of uneven quality, or arrive too late to inform choices.</p></div>
+<div><h3>Key activities</h3><ul><li>Data quality and integration approaches</li><li>Analytics support for priority policy questions</li><li>Guidance on using routine and survey data together</li></ul></div><div><h3>Expected outcome by 2031</h3><p>Partner institutions routinely use quality-checked data to answer priority policy questions.</p></div></div>
+<div class="rel"><span class="draft">Outcomes are draft until aligned with the results framework.</span><a class="btn" href="#resources">Related resources</a></div>
+</div></div></section><section class="sec alt" id="p2"><div class="w"><div class="pr">
+<div class="ph2"><span class="num">2</span><div><h2 style="margin:0">Evidence Generation and Synthesis</h2><div class="steps"><span>Analysis</span><span>Evidence</span></div></div></div>
+<div class="g4"><div><h3>Objective</h3><p>Produce and combine evidence that answers the questions policymakers are actually asking.</p></div><div><h3>Why it matters</h3><p>Decision-makers need timely, trustworthy summaries, not only individual studies.</p></div>
+<div><h3>Key activities</h3><ul><li>Rapid reviews and evidence maps</li><li>Shared research priorities across nodes</li><li>Implementation research</li></ul></div><div><h3>Expected outcome by 2031</h3><p>A shared research agenda and a steady flow of syntheses tied to national policy questions.</p></div></div>
+<div class="rel"><span class="draft">Outcomes are draft until aligned with the results framework.</span><a class="btn" href="#resources">Related resources</a></div>
+</div></div></section><section class="sec" id="p3"><div class="w"><div class="pr">
+<div class="ph2"><span class="num">3</span><div><h2 style="margin:0">Evidence-to-Policy Translation</h2><div class="steps"><span>Policy options</span><span>Policy dialogue</span></div></div></div>
+<div class="g4"><div><h3>Objective</h3><p>Turn evidence into clear policy options and support the conversations that follow.</p></div><div><h3>Why it matters</h3><p>Evidence rarely changes policy without translation, trust and dialogue.</p></div>
+<div><h3>Key activities</h3><ul><li>Plain-language policy briefs</li><li>Policy dialogues with ministries and stakeholders</li><li>Knowledge brokering</li></ul></div><div><h3>Expected outcome by 2031</h3><p>Policy briefs and dialogues are an established part of how nodes work with ministries.</p></div></div>
+<div class="rel"><span class="draft">Outcomes are draft until aligned with the results framework.</span><a class="btn" href="#resources">Related resources</a></div>
+</div></div></section><section class="sec alt" id="p4"><div class="w"><div class="pr">
+<div class="ph2"><span class="num">4</span><div><h2 style="margin:0">Health Policy and Regulation</h2><div class="steps"><span>Decision or regulation</span><span>Implementation</span></div></div></div>
+<div class="g4"><div><h3>Objective</h3><p>Support evidence-informed policy analysis and regulatory decisions, and learning across borders.</p></div><div><h3>Why it matters</h3><p>Regulatory and policy information is scattered, and countries often repeat each other's work.</p></div>
+<div><h3>Key activities</h3><ul><li>Policy and regulatory analysis</li><li>Comparison of regulatory approaches</li><li>Support for harmonization where countries choose it</li></ul></div><div><h3>Expected outcome by 2031</h3><p>Countries can compare and learn from each other's policy and regulatory experience.</p></div></div>
+<div class="rel"><span class="draft">Outcomes are draft until aligned with the results framework.</span><a class="btn" href="#resources">Related resources</a></div>
+</div></div></section><section class="sec" id="p5"><div class="w"><div class="pr">
+<div class="ph2"><span class="num">5</span><div><h2 style="margin:0">Capacity Development</h2><div class="steps"><span>All steps</span></div></div></div>
+<div class="g4"><div><h3>Objective</h3><p>Build lasting skills and institutions for using data and evidence.</p></div><div><h3>Why it matters</h3><p>Capacity is the difference between a platform that exists and one that is used.</p></div>
+<div><h3>Key activities</h3><ul><li>Courses, fellowships and mentorship</li><li>Strengthening node institutions</li><li>Peer learning exchanges</li></ul></div><div><h3>Expected outcome by 2031</h3><p>Strong, sustainable national teams in every participating country.</p></div></div>
+<div class="rel"><span class="draft">Outcomes are draft until aligned with the results framework.</span><a class="btn" href="#resources">Related resources</a></div>
+</div></div></section><section class="sec alt" id="p6"><div class="w"><div class="pr">
+<div class="ph2"><span class="num">6</span><div><h2 style="margin:0">Digital Knowledge and Learning</h2><div class="steps"><span>Monitoring</span><span>Learning</span></div></div></div>
+<div class="g4"><div><h3>Objective</h3><p>Create a shared digital home for knowledge, tools and learning.</p></div><div><h3>Why it matters</h3><p>A common platform lets lessons travel faster than the people who learned them.</p></div>
+<div><h3>Key activities</h3><ul><li>A digital knowledge platform and repository</li><li>Communities of practice</li><li>Foundations for a future data hub</li></ul></div><div><h3>Expected outcome by 2031</h3><p>A working digital knowledge platform and an active community of practice across the network.</p></div></div>
+<div class="rel"><span class="draft">Outcomes are draft until aligned with the results framework.</span><a class="btn" href="#resources">Related resources</a></div>
+</div></div></section>
+<section class="sec" id="together"><div class="w">
+ <h2>What ties the work together</h2>
+ <div class="together">
+  <div class="cd"><h3>Country nodes deliver</h3><p>Work is carried out with and through national D2P nodes in Ethiopia, Rwanda and Zambia, and later in other countries.</p></div>
+  <div class="cd"><h3>Common standards</h3><p>Shared methods and quality criteria make work comparable and reusable across borders.</p></div>
+  <div class="cd"><h3>National ownership</h3><p>Countries own their data and decisions. The Hub supports and does not direct.</p></div>
+ </div>
+</div></section>
+
+<div class="w"><div class="cta"><h2>Put the pillars to work in your country</h2><p>Explore our latest outputs, or talk to us about joining the network as a country node.</p><a class="btn" href="#resources">Browse resources</a><a class="btn o" href="#nodes">See country nodes</a></div></div>
+</main>
+<footer id="involved">
+ <div class="w">
+  <div class="f">
+   <div><h3>D2P Africa Hub</h3><p>Regional standards, national ownership. The Hub complements national systems and does not own national data.</p></div>
+   <div><h3>Explore</h3><a href="index.html">Home</a><a href="OurWork.html">Our Work</a><a href="#nodes">Country Nodes</a><a href="#resources">Resources</a><a href="About.html">About</a></div>
+   <div><h3>Get involved</h3><a href="#involved">Contact the Secretariat</a><a href="#involved">Partner with us</a><a href="#involved">Join as a country node</a><a href="#involved">Opportunities</a></div>
+   <div><h3>Legal</h3><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Accessibility</a></div>
+  </div>
+  <p class="ow">&copy; D2P Africa Hub. All rights reserved.</p>
+ </div>
+</footer>
+<script>
+var mb=document.getElementById('mb'),nav=document.getElementById('nav');
+mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+nav.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+</script>
+</body>
+</html>

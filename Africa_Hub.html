@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Country Nodes | D2P Africa Hub</title>
+<style>
+:root{--ink:#10222e;--lagoon:#0f7c80;--ochre:#e3a32b;--paper:#ffffff;--sage:#f4f8f7;--text:#1c2b35;--muted:#566873;--line:#e4ebe9;--sh:0 6px 20px rgba(16,34,46,.09),0 1px 3px rgba(16,34,46,.07);--card:#fff;--hero1:#10222e;--hero2:#0f5c63;
+--serif:Georgia,"Iowan Old Style","Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--paper:#0c161d;--sage:#122029;--text:#e6eef1;--muted:#9bb0ba;--line:#243845;--card:#12202a;--ink:#e6eef1;--lagoon:#46c2c6;--sh:0 6px 20px rgba(0,0,0,.45)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font:1.0625rem/1.65 var(--sans)}
+a{color:var(--lagoon)}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.w{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--ink);margin:0 0 .6rem}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}h3{font-size:1.2rem}
+.sec{padding:4.5rem 0}.alt{background:var(--sage)}
+.lede{max-width:62ch;color:var(--muted);font-size:1.15rem}
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:#10222e;color:#fff;padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem}
+.brand{font:700 1.3rem var(--serif);color:#fff;text-decoration:none}.brand b{color:var(--ochre)}
+nav.main{display:flex;gap:1.3rem;align-items:center}nav.main a{color:#dbe7ea;text-decoration:none;font-size:.95rem}
+nav.main a:hover{color:#fff}
+.join{background:var(--ochre);color:#10222e!important;padding:.45rem 1rem;border-radius:999px;font-weight:700}
+.mb{display:none;background:none;border:1px solid #6b8591;color:#fff;border-radius:6px;padding:.35rem .8rem;font:inherit}
+.util{background:#0a1820;color:#9fb6bf;font-size:.82rem}.util .w{display:flex;justify-content:flex-end;gap:1.2rem;padding-top:.3rem;padding-bottom:.3rem}
+.util a,.util button{color:#9fb6bf;text-decoration:none;background:none;border:0;font:inherit;cursor:pointer}
+@media(max-width:860px){.mb{display:block}nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#10222e;flex-direction:column;align-items:flex-start;padding:1rem 1.25rem 1.5rem}nav.main.open{display:flex}}
+/* hero */
+.hero{background:radial-gradient(900px 400px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:4.5rem 0 3rem}
+.hero h1{color:#fff;font-size:clamp(2.3rem,6vw,4.2rem);max-width:15ch;letter-spacing:-.01em}
+.hero .tag{font:italic 1.35rem var(--serif);color:var(--ochre);margin:.2rem 0 1rem}
+.hero p.lede{color:#c9dadf}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--ochre);color:#10222e;border:2px solid var(--ochre);margin:.3rem .5rem .3rem 0}
+.btn.o{background:transparent;color:#fff;border-color:#8fb0b8}
+/* pipeline */
+.pipe{margin-top:3rem}
+.rail{display:flex;list-style:none;margin:0;padding:0;overflow-x:auto;gap:0;scrollbar-width:thin}
+.rail li{flex:1 0 108px;position:relative;text-align:center}
+.rail li:not(:last-child)::after{content:"";position:absolute;top:1.35rem;left:50%;width:100%;height:2px;background:#4b7c85}
+.rail button{position:relative;z-index:1;background:none;border:0;color:#c9dadf;font:inherit;font-size:.88rem;cursor:pointer;padding:0 .2rem;width:100%}
+.rail .dot{display:grid;place-items:center;width:2.7rem;height:2.7rem;margin:0 auto .4rem;border-radius:50%;background:#10222e;border:2px solid #4b7c85;font-weight:700;color:#fff}
+.rail button[aria-selected=true] .dot{background:var(--ochre);border-color:var(--ochre);color:#10222e;transform:scale(1.12)}
+.rail button[aria-selected=true]{color:#fff;font-weight:700}
+.panel{margin-top:1.4rem;background:#ffffff14;border:1px solid #ffffff2e;border-radius:12px;padding:1.1rem 1.4rem;min-height:5.5rem}
+.panel strong{font:600 1.2rem var(--serif);color:var(--ochre)}.panel p{margin:.3rem 0 0;color:#e8f1f3}
+/* two col */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:800px){.cols{grid-template-columns:1fr;gap:1.5rem}}
+.why p{border-left:4px solid var(--ochre);padding-left:1rem;margin:0 0 1.1rem}
+.does{list-style:none;padding:0;margin:0}.does li{padding:.55rem 0 .55rem 1.8rem;border-bottom:1px solid var(--line);position:relative}
+.does li::before{content:"\2713";position:absolute;left:0;color:var(--lagoon);font-weight:700}
+.not{background:var(--card);color:var(--text);border-left:6px solid var(--ochre);border-radius:12px;padding:1.5rem;box-shadow:var(--sh)}.not h3{color:var(--ink)}.not strong{color:var(--ink)}
+/* pillars */
+.pl{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:800px){.pl{grid-template-columns:1fr}}
+.pl li{display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.4rem;background:var(--card);border-radius:12px;box-shadow:var(--sh);border-top:4px solid var(--lagoon)}
+.pl .n{font:700 2.4rem/1 var(--serif);color:var(--lagoon)}
+.pl h3{margin-bottom:.2rem}.pl p{margin:0;color:var(--muted)}
+.pl a{text-decoration:none;color:inherit}.pl a:hover h3{color:var(--lagoon)}
+/* nodes */
+.nodes{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:900px){.nodes{grid-template-columns:1fr 1fr}}@media(max-width:560px){.nodes{grid-template-columns:1fr}}
+.node{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--lagoon);border-radius:12px;padding:1.3rem;box-shadow:var(--sh);text-decoration:none;color:var(--text)}
+.node h3{font-size:1.5rem}.node small{color:var(--muted)}
+.node.next{border:2px dashed var(--lagoon);border-top-width:2px;box-shadow:none;background:var(--sage)}
+.badge{display:inline-block;font-size:.78rem;background:var(--sage);border-radius:999px;padding:.1rem .7rem;margin-bottom:.5rem}
+/* outputs */
+.outs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+@media(max-width:860px){.outs{grid-template-columns:1fr}}
+.out{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;box-shadow:var(--sh)}
+.out p{margin:.3rem 0;color:var(--muted)}.meta{font-size:.85rem;color:var(--muted)}
+/* vision */
+.vision{background:var(--paper)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+@media(max-width:760px){.stats{grid-template-columns:1fr}}
+.stats>div{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--sh);border-bottom:5px solid var(--ochre)}
+.stats strong{display:block;font:700 clamp(2.4rem,5vw,3.4rem)/1 var(--serif);color:var(--lagoon)}
+.stats span{color:var(--muted)}
+/* governance */
+.gov{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:900px){.gov{grid-template-columns:1fr 1fr}}@media(max-width:560px){.gov{grid-template-columns:1fr}}
+.gov div{border-left:4px solid var(--ochre);background:var(--card);padding:1.1rem 1.2rem;border-radius:0 12px 12px 0;box-shadow:var(--sh)}
+.gov h3{font-size:1.05rem}.gov p{margin:0;font-size:.95rem;color:var(--muted)}
+/* footer */
+.news{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center}
+@media(max-width:800px){.news{grid-template-columns:1fr}}
+.news form{display:flex;gap:.5rem;flex-wrap:wrap}
+.news input{box-shadow:var(--sh);flex:1 1 220px;padding:.8rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.news button{border:0;cursor:pointer;font:inherit;font-weight:700}
+#ok{color:var(--lagoon);font-weight:600;min-height:1.5rem}
+.logos{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}.logos span{border:1px dashed var(--line);border-radius:8px;padding:.6rem 1.2rem;background:var(--card);box-shadow:var(--sh);color:var(--muted);font-size:.9rem}
+footer{background:#0a1820;color:#9fb6bf;padding:2.5rem 0 calc(2rem + env(safe-area-inset-bottom,0px));font-size:.92rem}
+footer .f{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
+@media(max-width:800px){footer .f{grid-template-columns:1fr 1fr}}
+footer a{color:#cfe0e4;display:block;text-decoration:none;margin:.25rem 0}footer h3{color:#fff;font:600 1rem var(--sans)}
+footer .ow{border-top:1px solid #1f3743;margin-top:1.5rem;padding-top:1rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.ph{background:radial-gradient(900px 360px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:3.5rem 0 2.5rem}
+.ph h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:18ch}.ph .lede{color:#c9dadf}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chips a{color:#fff;text-decoration:none;border:1px solid #8fb0b8;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}.chips a:hover{background:#ffffff22}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.6rem;box-shadow:var(--sh);border-top:5px solid var(--lagoon)}.cd.g{border-top-color:var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}
+.big{font:italic 600 clamp(1.6rem,4vw,2.5rem)/1.25 var(--serif);color:var(--ink);border-left:6px solid var(--ochre);padding-left:1.2rem;margin:1.5rem 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.three{grid-template-columns:1fr}}
+.chain{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;counter-reset:s}@media(max-width:860px){.chain{grid-template-columns:1fr 1fr}}@media(max-width:560px){.chain{grid-template-columns:1fr}}
+.chain div{background:var(--card);border-radius:12px;padding:1.1rem 1.2rem;box-shadow:var(--sh)}.chain b{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--lagoon);color:#fff;margin-right:.5rem;font-size:.9rem}
+.chain h3{display:flex;align-items:center;font-size:1.05rem}.chain p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+.pc{background:var(--card);border-radius:12px;padding:1.4rem;box-shadow:var(--sh);border-top:4px solid var(--lagoon)}.pc ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}.pc p{margin:.3rem 0;color:var(--text)}.pc small{color:var(--lagoon);font-weight:700}
+.tree{display:grid;gap:.8rem;margin-top:2rem}.tree .row{display:grid;gap:.8rem}.tree .r2{grid-template-columns:1fr 1fr}.tree .r1{grid-template-columns:minmax(0,520px);justify-content:center}.tree .r3{grid-template-columns:minmax(0,520px);justify-content:center}
+@media(max-width:700px){.tree .r2{grid-template-columns:1fr}}
+.tree .cd{text-align:center}.tree .cd.g{background:var(--paper)}
+.stp{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem;counter-reset:q}@media(max-width:860px){.stp{grid-template-columns:1fr}}
+.cta{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:2.5rem;margin:0 0 4rem}.cta h2{color:#fff}.cta p{color:#c9dadf;max-width:60ch}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+
+.ow{background:radial-gradient(900px 360px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:3.5rem 0 2.5rem}
+.ow h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:18ch}.ow .lede{color:#c9dadf}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chips a{color:#fff;text-decoration:none;border:1px solid #8fb0b8;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}.chips a:hover{background:#ffffff22}
+.map{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:12px;box-shadow:var(--sh);overflow:hidden;margin-top:1.5rem;font-size:.95rem}
+.mw{overflow-x:auto}.map th,.map td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--line)}.map th{background:var(--sage);color:var(--ink)}.map tr:last-child td{border-bottom:0}
+.pr{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:2rem;border-top:6px solid var(--lagoon)}
+.ph2{display:flex;gap:1.2rem;align-items:flex-start;flex-wrap:wrap}.num{font:700 3.6rem/1 var(--serif);color:var(--lagoon)}
+.steps{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0}.steps span{background:var(--sage);border-radius:999px;padding:.1rem .8rem;font-size:.82rem;color:var(--ink)}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}@media(max-width:800px){.g4{grid-template-columns:1fr}}
+.g4 h3{font-size:1.05rem;color:var(--lagoon)}.g4 p,.g4 ul{margin:.2rem 0 0}.g4 ul{padding-left:1.1rem}.g4 li{margin:.2rem 0}
+.rel{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line);display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.draft{font-size:.85rem;color:var(--muted)}
+.together{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.together{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--sh);border-top:5px solid var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}
+.cta{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:2.5rem;margin:0 0 4rem}.cta h2{color:#fff}.cta p{color:#c9dadf;max-width:60ch}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+
+.nd{background:var(--card);border-radius:16px;box-shadow:var(--sh);border-top:6px solid var(--lagoon);padding:1.8rem;display:flex;flex-direction:column}
+.nd h3{font-size:1.8rem}.nd dl{margin:1rem 0 0;display:grid;gap:.7rem}.nd dt{font-size:.82rem;color:var(--lagoon);font-weight:700}.nd dd{margin:0;color:var(--text)}
+.tbc{color:var(--muted);font-style:italic}.nd .btn{margin-top:1.3rem;align-self:flex-start}
+.n3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}@media(max-width:900px){.n3{grid-template-columns:1fr}}
+.f4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.5rem}@media(max-width:900px){.f4{grid-template-columns:1fr 1fr}}@media(max-width:560px){.f4{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.4rem;box-shadow:var(--sh);border-top:5px solid var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}.cd h3{font-size:1.1rem}
+.road{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.road{grid-template-columns:1fr}}
+.road .cd{border-top-color:var(--lagoon)}.road small{color:var(--lagoon);font-weight:700}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+.keep{display:flex;gap:1.2rem;align-items:center;background:var(--card);border-left:6px solid var(--ochre);border-radius:12px;box-shadow:var(--sh);padding:1.5rem}
+.keep strong{font:700 1.3rem var(--serif);color:var(--ink)}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="w bar">
+  <a class="brand" href="index.html">D2P <b>Africa Hub</b></a>
+  <button class="mb" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="main" id="nav" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="Work.html">Our Work</a>
+   <a href="Africa_Hub.html" aria-current="page" style="color:#fff;border-bottom:2px solid var(--ochre)">Country Nodes</a>
+   <a href="Resources.html">Resources</a>
+   <a href="Events.html">News and Events</a>
+   <a href="About.html">About</a>
+   <a href="#data">Login</a>
+  </nav>
+ </div>
+</header>
+<main id="top">
+<section class="ow"><div class="w">
+ <h1>Country nodes: the Hub at work in each country</h1>
+ <p class="lede">Each country node is a national team that connects the Hub to its ministry of health, regulators and research institutions. We begin with Ethiopia, Rwanda and Zambia, and aim to grow the network to about 8 to 12 countries by 2031.</p>
+ <nav class="chips" aria-label="On this page"><a href="#what">What a node is</a><a href="#founding">Founding nodes</a><a href="#together">How nodes and the Hub work together</a><a href="#join">Join the network</a></nav>
+</div></section>
+
+<section class="sec" id="what"><div class="w">
+ <h2>What a country node does</h2>
+ <p class="lede">A node brings the D2P model to life in one country, using national data and national priorities.</p>
+ <div class="f4">
+  <div class="cd"><h3>Answers priority questions</h3><p>Works with the ministry on the policy questions that matter most nationally.</p></div>
+  <div class="cd"><h3>Turns data into evidence</h3><p>Analyses national data and synthesises evidence using common methods.</p></div>
+  <div class="cd"><h3>Supports policy dialogue</h3><p>Produces policy briefs and convenes decision-makers and stakeholders.</p></div>
+  <div class="cd"><h3>Shares and learns</h3><p>Contributes outputs and lessons to the network and learns from peers.</p></div>
+ </div>
+</div></section>
+
+<section class="sec alt" id="founding"><div class="w">
+ <h2>Founding nodes</h2>
+ <p class="lede">The first three nodes. Each will have its own page with its team, priorities, projects and outputs.</p>
+ <div class="n3"><article class="nd" id="ethiopia"><span class="badge">Active node</span><h3>Ethiopia</h3>
+<dl><div><dt>Host institution</dt><dd class="tbc">To be confirmed</dd></div><div><dt>Node coordinator</dt><dd class="tbc">To be confirmed</dd></div>
+<div><dt>Priority policy questions</dt><dd class="tbc">To be agreed with the ministry of health</dd></div><div><dt>Focus areas</dt><dd>To be set with the node</dd></div></dl>
+<a class="btn" href="Ethiopia.html">View Ethiopia node page</a></article><article class="nd" id="rwanda"><span class="badge">Active node</span><h3>Rwanda</h3>
+<dl><div><dt>Host institution</dt><dd class="tbc">To be confirmed</dd></div><div><dt>Node coordinator</dt><dd class="tbc">To be confirmed</dd></div>
+<div><dt>Priority policy questions</dt><dd class="tbc">To be agreed with the ministry of health</dd></div><div><dt>Focus areas</dt><dd>To be set with the node</dd></div></dl>
+<a class="btn" href="Rwanda.html">View Rwanda node page</a></article><article class="nd" id="zambia"><span class="badge">Active node</span><h3>Zambia</h3>
+<dl><div><dt>Host institution</dt><dd class="tbc">To be confirmed</dd></div><div><dt>Node coordinator</dt><dd class="tbc">To be confirmed</dd></div>
+<div><dt>Priority policy questions</dt><dd class="tbc">To be agreed with the ministry of health</dd></div><div><dt>Focus areas</dt><dd>To be set with the node</dd></div></dl>
+<a class="btn" href="Zambia.html">View Zambia node page</a></article></div>
+ <p class="note">Host institutions, coordinators and priorities will be added as each node confirms them.</p>
+</div></section>
+
+<section class="sec" id="together"><div class="w">
+ <h2>How nodes and the Hub work together</h2>
+ <div class="two cols" style="margin-top:1.5rem">
+  <div class="cd"><h3>What the Secretariat provides</h3><p>Common methods and standards, analytical and evidence-synthesis support, training and fellowships, the digital knowledge platform, and cross-country learning.</p></div>
+  <div class="cd"><h3>What each node provides</h3><p>National leadership, access to national priorities and stakeholders, local expertise, and outputs that feed the shared knowledge library.</p></div>
+ </div>
+ <div class="keep" style="margin-top:1.5rem"><strong>National data stays national.</strong><span>Data shown or linked on node pages remains owned and governed by the country concerned. The Hub links to national systems and does not replace them.</span></div>
+</div></section>
+
+<section class="sec alt" id="join"><div class="w">
+ <h2>Join the network</h2>
+ <p class="lede">The Hub welcomes African countries that want to strengthen how health data and evidence inform policy.</p>
+ <div class="road">
+  <div class="cd"><small>Step 1</small><h3>Express interest</h3><p>Contact the Secretariat to discuss your priorities and how the Hub could help.</p></div>
+  <div class="cd"><small>Step 2</small><h3>Identify a host</h3><p>Agree a host institution, a coordinator and a link to the ministry of health.</p></div>
+  <div class="cd"><small>Step 3</small><h3>Establish the node</h3><p>Adopt the common standards, agree a work plan and begin joint work.</p></div>
+ </div>
+ <h3 style="margin-top:2.2rem">Our growth path to 2031</h3>
+ <div class="road">
+  <div class="cd"><small>Now</small><h3>3 founding nodes</h3><p>Ethiopia, Rwanda and Zambia.</p></div>
+  <div class="cd"><small>Next</small><h3>Expansion nodes</h3><p>New countries join using a standard template and onboarding process.</p></div>
+  <div class="cd"><small>By 2031</small><h3>8 to 12 countries</h3><p>A functioning regional network with a sustainable financing model.</p></div>
+ </div>
+ <p class="note">Membership criteria and the onboarding process are draft and will be confirmed by the Governing Council.</p>
+</div></section>
+
+<div class="w" style="padding-top:3rem"><div class="cta"><h2>Bring your country into the network</h2><p>Tell us about your priorities and we will explore how a node could work for your ministry and partners.</p><a class="btn" href="#join">Contact the Secretariat</a><a class="btn o" href="OurWork.html">See our work</a></div></div>
+</main>
+<footer id="involved">
+ <div class="w">
+  <div class="f">
+   <div><h3>D2P Africa Hub</h3><p>Regional standards, national ownership. The Hub complements national systems and does not own national data.</p></div>
+   <div><h3>Explore</h3><a href="index.html">Home</a><a href="OurWork.html">Our Work</a><a href="CountryNodes.html">Country Nodes</a><a href="#resources">Resources</a><a href="About.html">About</a></div>
+   <div><h3>Get involved</h3><a href="#involved">Contact the Secretariat</a><a href="#involved">Partner with us</a><a href="#involved">Join as a country node</a><a href="#involved">Opportunities</a></div>
+   <div><h3>Legal</h3><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Accessibility</a></div>
+  </div>
+  <p class="ow">&copy; D2P Africa Hub. All rights reserved.</p>
+ </div>
+</footer>
+<script>
+var mb=document.getElementById('mb'),nav=document.getElementById('nav');
+mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+nav.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+</script>
+</body>
+</html>

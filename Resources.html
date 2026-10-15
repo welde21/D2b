@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resources | D2P Africa Hub</title>
+<style>
+:root{--ink:#10222e;--lagoon:#0f7c80;--ochre:#e3a32b;--paper:#ffffff;--sage:#f4f8f7;--text:#1c2b35;--muted:#566873;--line:#e4ebe9;--sh:0 6px 20px rgba(16,34,46,.09),0 1px 3px rgba(16,34,46,.07);--card:#fff;--hero1:#10222e;--hero2:#0f5c63;
+--serif:Georgia,"Iowan Old Style","Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--paper:#0c161d;--sage:#122029;--text:#e6eef1;--muted:#9bb0ba;--line:#243845;--card:#12202a;--ink:#e6eef1;--lagoon:#46c2c6;--sh:0 6px 20px rgba(0,0,0,.45)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font:1.0625rem/1.65 var(--sans)}
+a{color:var(--lagoon)}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.w{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--ink);margin:0 0 .6rem}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}h3{font-size:1.2rem}
+.sec{padding:4.5rem 0}.alt{background:var(--sage)}
+.lede{max-width:62ch;color:var(--muted);font-size:1.15rem}
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:#10222e;color:#fff;padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem}
+.brand{font:700 1.3rem var(--serif);color:#fff;text-decoration:none}.brand b{color:var(--ochre)}
+nav.main{display:flex;gap:1.3rem;align-items:center}nav.main a{color:#dbe7ea;text-decoration:none;font-size:.95rem}
+nav.main a:hover{color:#fff}
+.join{background:var(--ochre);color:#10222e!important;padding:.45rem 1rem;border-radius:999px;font-weight:700}
+.mb{display:none;background:none;border:1px solid #6b8591;color:#fff;border-radius:6px;padding:.35rem .8rem;font:inherit}
+.util{background:#0a1820;color:#9fb6bf;font-size:.82rem}.util .w{display:flex;justify-content:flex-end;gap:1.2rem;padding-top:.3rem;padding-bottom:.3rem}
+.util a,.util button{color:#9fb6bf;text-decoration:none;background:none;border:0;font:inherit;cursor:pointer}
+@media(max-width:860px){.mb{display:block}nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:#10222e;flex-direction:column;align-items:flex-start;padding:1rem 1.25rem 1.5rem}nav.main.open{display:flex}}
+/* hero */
+.hero{background:radial-gradient(900px 400px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:4.5rem 0 3rem}
+.hero h1{color:#fff;font-size:clamp(2.3rem,6vw,4.2rem);max-width:15ch;letter-spacing:-.01em}
+.hero .tag{font:italic 1.35rem var(--serif);color:var(--ochre);margin:.2rem 0 1rem}
+.hero p.lede{color:#c9dadf}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--ochre);color:#10222e;border:2px solid var(--ochre);margin:.3rem .5rem .3rem 0}
+.btn.o{background:transparent;color:#fff;border-color:#8fb0b8}
+/* pipeline */
+.pipe{margin-top:3rem}
+.rail{display:flex;list-style:none;margin:0;padding:0;overflow-x:auto;gap:0;scrollbar-width:thin}
+.rail li{flex:1 0 108px;position:relative;text-align:center}
+.rail li:not(:last-child)::after{content:"";position:absolute;top:1.35rem;left:50%;width:100%;height:2px;background:#4b7c85}
+.rail button{position:relative;z-index:1;background:none;border:0;color:#c9dadf;font:inherit;font-size:.88rem;cursor:pointer;padding:0 .2rem;width:100%}
+.rail .dot{display:grid;place-items:center;width:2.7rem;height:2.7rem;margin:0 auto .4rem;border-radius:50%;background:#10222e;border:2px solid #4b7c85;font-weight:700;color:#fff}
+.rail button[aria-selected=true] .dot{background:var(--ochre);border-color:var(--ochre);color:#10222e;transform:scale(1.12)}
+.rail button[aria-selected=true]{color:#fff;font-weight:700}
+.panel{margin-top:1.4rem;background:#ffffff14;border:1px solid #ffffff2e;border-radius:12px;padding:1.1rem 1.4rem;min-height:5.5rem}
+.panel strong{font:600 1.2rem var(--serif);color:var(--ochre)}.panel p{margin:.3rem 0 0;color:#e8f1f3}
+/* two col */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:800px){.cols{grid-template-columns:1fr;gap:1.5rem}}
+.why p{border-left:4px solid var(--ochre);padding-left:1rem;margin:0 0 1.1rem}
+.does{list-style:none;padding:0;margin:0}.does li{padding:.55rem 0 .55rem 1.8rem;border-bottom:1px solid var(--line);position:relative}
+.does li::before{content:"\2713";position:absolute;left:0;color:var(--lagoon);font-weight:700}
+.not{background:var(--card);color:var(--text);border-left:6px solid var(--ochre);border-radius:12px;padding:1.5rem;box-shadow:var(--sh)}.not h3{color:var(--ink)}.not strong{color:var(--ink)}
+/* pillars */
+.pl{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:800px){.pl{grid-template-columns:1fr}}
+.pl li{display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.4rem;background:var(--card);border-radius:12px;box-shadow:var(--sh);border-top:4px solid var(--lagoon)}
+.pl .n{font:700 2.4rem/1 var(--serif);color:var(--lagoon)}
+.pl h3{margin-bottom:.2rem}.pl p{margin:0;color:var(--muted)}
+.pl a{text-decoration:none;color:inherit}.pl a:hover h3{color:var(--lagoon)}
+/* nodes */
+.nodes{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:900px){.nodes{grid-template-columns:1fr 1fr}}@media(max-width:560px){.nodes{grid-template-columns:1fr}}
+.node{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--lagoon);border-radius:12px;padding:1.3rem;box-shadow:var(--sh);text-decoration:none;color:var(--text)}
+.node h3{font-size:1.5rem}.node small{color:var(--muted)}
+.node.next{border:2px dashed var(--lagoon);border-top-width:2px;box-shadow:none;background:var(--sage)}
+.badge{display:inline-block;font-size:.78rem;background:var(--sage);border-radius:999px;padding:.1rem .7rem;margin-bottom:.5rem}
+/* outputs */
+.outs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+@media(max-width:860px){.outs{grid-template-columns:1fr}}
+.out{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;box-shadow:var(--sh)}
+.out p{margin:.3rem 0;color:var(--muted)}.meta{font-size:.85rem;color:var(--muted)}
+/* vision */
+.vision{background:var(--paper)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+@media(max-width:760px){.stats{grid-template-columns:1fr}}
+.stats>div{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--sh);border-bottom:5px solid var(--ochre)}
+.stats strong{display:block;font:700 clamp(2.4rem,5vw,3.4rem)/1 var(--serif);color:var(--lagoon)}
+.stats span{color:var(--muted)}
+/* governance */
+.gov{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:900px){.gov{grid-template-columns:1fr 1fr}}@media(max-width:560px){.gov{grid-template-columns:1fr}}
+.gov div{border-left:4px solid var(--ochre);background:var(--card);padding:1.1rem 1.2rem;border-radius:0 12px 12px 0;box-shadow:var(--sh)}
+.gov h3{font-size:1.05rem}.gov p{margin:0;font-size:.95rem;color:var(--muted)}
+/* footer */
+.news{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center}
+@media(max-width:800px){.news{grid-template-columns:1fr}}
+.news form{display:flex;gap:.5rem;flex-wrap:wrap}
+.news input{box-shadow:var(--sh);flex:1 1 220px;padding:.8rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.news button{border:0;cursor:pointer;font:inherit;font-weight:700}
+#ok{color:var(--lagoon);font-weight:600;min-height:1.5rem}
+.logos{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}.logos span{border:1px dashed var(--line);border-radius:8px;padding:.6rem 1.2rem;background:var(--card);box-shadow:var(--sh);color:var(--muted);font-size:.9rem}
+footer{background:#0a1820;color:#9fb6bf;padding:2.5rem 0 calc(2rem + env(safe-area-inset-bottom,0px));font-size:.92rem}
+footer .f{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
+@media(max-width:800px){footer .f{grid-template-columns:1fr 1fr}}
+footer a{color:#cfe0e4;display:block;text-decoration:none;margin:.25rem 0}footer h3{color:#fff;font:600 1rem var(--sans)}
+footer .ow{border-top:1px solid #1f3743;margin-top:1.5rem;padding-top:1rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.ph{background:radial-gradient(900px 360px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:3.5rem 0 2.5rem}
+.ph h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:18ch}.ph .lede{color:#c9dadf}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chips a{color:#fff;text-decoration:none;border:1px solid #8fb0b8;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}.chips a:hover{background:#ffffff22}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.6rem;box-shadow:var(--sh);border-top:5px solid var(--lagoon)}.cd.g{border-top-color:var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}
+.big{font:italic 600 clamp(1.6rem,4vw,2.5rem)/1.25 var(--serif);color:var(--ink);border-left:6px solid var(--ochre);padding-left:1.2rem;margin:1.5rem 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.three{grid-template-columns:1fr}}
+.chain{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;counter-reset:s}@media(max-width:860px){.chain{grid-template-columns:1fr 1fr}}@media(max-width:560px){.chain{grid-template-columns:1fr}}
+.chain div{background:var(--card);border-radius:12px;padding:1.1rem 1.2rem;box-shadow:var(--sh)}.chain b{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--lagoon);color:#fff;margin-right:.5rem;font-size:.9rem}
+.chain h3{display:flex;align-items:center;font-size:1.05rem}.chain p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+.pc{background:var(--card);border-radius:12px;padding:1.4rem;box-shadow:var(--sh);border-top:4px solid var(--lagoon)}.pc ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}.pc p{margin:.3rem 0;color:var(--text)}.pc small{color:var(--lagoon);font-weight:700}
+.tree{display:grid;gap:.8rem;margin-top:2rem}.tree .row{display:grid;gap:.8rem}.tree .r2{grid-template-columns:1fr 1fr}.tree .r1{grid-template-columns:minmax(0,520px);justify-content:center}.tree .r3{grid-template-columns:minmax(0,520px);justify-content:center}
+@media(max-width:700px){.tree .r2{grid-template-columns:1fr}}
+.tree .cd{text-align:center}.tree .cd.g{background:var(--paper)}
+.stp{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem;counter-reset:q}@media(max-width:860px){.stp{grid-template-columns:1fr}}
+.cta{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:2.5rem;margin:0 0 4rem}.cta h2{color:#fff}.cta p{color:#c9dadf;max-width:60ch}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+
+.ow{background:radial-gradient(900px 360px at 85% 0,#17808055,transparent),linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;padding:3.5rem 0 2.5rem}
+.ow h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:18ch}.ow .lede{color:#c9dadf}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chips a{color:#fff;text-decoration:none;border:1px solid #8fb0b8;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}.chips a:hover{background:#ffffff22}
+.map{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:12px;box-shadow:var(--sh);overflow:hidden;margin-top:1.5rem;font-size:.95rem}
+.mw{overflow-x:auto}.map th,.map td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--line)}.map th{background:var(--sage);color:var(--ink)}.map tr:last-child td{border-bottom:0}
+.pr{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:2rem;border-top:6px solid var(--lagoon)}
+.ph2{display:flex;gap:1.2rem;align-items:flex-start;flex-wrap:wrap}.num{font:700 3.6rem/1 var(--serif);color:var(--lagoon)}
+.steps{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0}.steps span{background:var(--sage);border-radius:999px;padding:.1rem .8rem;font-size:.82rem;color:var(--ink)}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}@media(max-width:800px){.g4{grid-template-columns:1fr}}
+.g4 h3{font-size:1.05rem;color:var(--lagoon)}.g4 p,.g4 ul{margin:.2rem 0 0}.g4 ul{padding-left:1.1rem}.g4 li{margin:.2rem 0}
+.rel{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line);display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.draft{font-size:.85rem;color:var(--muted)}
+.together{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.together{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--sh);border-top:5px solid var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}
+.cta{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:2.5rem;margin:0 0 4rem}.cta h2{color:#fff}.cta p{color:#c9dadf;max-width:60ch}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+
+.nd{background:var(--card);border-radius:16px;box-shadow:var(--sh);border-top:6px solid var(--lagoon);padding:1.8rem;display:flex;flex-direction:column}
+.nd h3{font-size:1.8rem}.nd dl{margin:1rem 0 0;display:grid;gap:.7rem}.nd dt{font-size:.82rem;color:var(--lagoon);font-weight:700}.nd dd{margin:0;color:var(--text)}
+.tbc{color:var(--muted);font-style:italic}.nd .btn{margin-top:1.3rem;align-self:flex-start}
+.n3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}@media(max-width:900px){.n3{grid-template-columns:1fr}}
+.f4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.5rem}@media(max-width:900px){.f4{grid-template-columns:1fr 1fr}}@media(max-width:560px){.f4{grid-template-columns:1fr}}
+.cd{background:var(--card);border-radius:12px;padding:1.4rem;box-shadow:var(--sh);border-top:5px solid var(--ochre)}.cd p{margin:.4rem 0 0;color:var(--muted)}.cd h3{font-size:1.1rem}
+.road{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}@media(max-width:860px){.road{grid-template-columns:1fr}}
+.road .cd{border-top-color:var(--lagoon)}.road small{color:var(--lagoon);font-weight:700}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+.keep{display:flex;gap:1.2rem;align-items:center;background:var(--card);border-left:6px solid var(--ochre);border-radius:12px;box-shadow:var(--sh);padding:1.5rem}
+.keep strong{font:700 1.3rem var(--serif);color:var(--ink)}
+
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}@media(max-width:900px){.tiles{grid-template-columns:1fr 1fr}}@media(max-width:520px){.tiles{grid-template-columns:1fr}}
+.tile{background:var(--card);border:0;border-top:5px solid var(--lagoon);border-radius:12px;box-shadow:var(--sh);padding:1rem 1.1rem;text-align:left;font:inherit;color:var(--text);cursor:pointer}.tile b{display:block;font:600 1.05rem var(--serif);color:var(--ink)}.tile span{font-size:.85rem;color:var(--muted)}.tile[aria-pressed=true]{background:var(--ink);border-top-color:var(--ochre)}.tile[aria-pressed=true] b,.tile[aria-pressed=true] span{color:#fff}
+.fbar{background:var(--card);border-radius:14px;box-shadow:var(--sh);padding:1.2rem;display:grid;grid-template-columns:2fr repeat(5,1fr);gap:.7rem;margin-top:1.5rem}@media(max-width:1000px){.fbar{grid-template-columns:1fr 1fr}.fbar .q{grid-column:1/-1}}@media(max-width:520px){.fbar{grid-template-columns:1fr}}
+.fbar input,.fbar select{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--text);font:inherit}
+.bar2{display:flex;justify-content:space-between;align-items:center;margin:1.2rem 0 0;gap:1rem;flex-wrap:wrap}.bar2 button{background:none;border:0;color:var(--lagoon);font:inherit;font-weight:700;cursor:pointer;text-decoration:underline}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1rem}@media(max-width:900px){.rg{grid-template-columns:1fr 1fr}}@media(max-width:600px){.rg{grid-template-columns:1fr}}
+.rc{background:var(--card);border-radius:12px;box-shadow:var(--sh);padding:1.3rem;display:flex;flex-direction:column;border-top:5px solid var(--lagoon)}.rc h3{font-size:1.12rem}.rc p{margin:.2rem 0;color:var(--muted);font-size:.95rem}.rc .tg{margin:.7rem 0;display:flex;flex-wrap:wrap;gap:.3rem}.rc .tg span{background:var(--sage);border-radius:999px;padding:.05rem .65rem;font-size:.78rem;color:var(--ink)}.rc a{margin-top:auto;font-weight:700}
+.smp{font-size:.72rem;background:#fdf1d6;color:#7a5200;border-radius:4px;padding:.05rem .4rem;margin-left:.4rem}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--ochre);padding-left:.8rem;margin-top:1.5rem}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="w bar">
+  <a class="brand" href="index.html">D2P <b>Africa Hub</b></a>
+  <button class="mb" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="main" id="nav" aria-label="Main">
+   <a href="index.html">Home</a>
+   <a href="Work.html">Our Work</a>
+   <a href="Nodes.html">Country Nodes</a>
+   <a href="Resources.html" aria-current="page" style="color:#fff;border-bottom:2px solid var(--ochre)">Resources</a>
+   <a href="#news">News and Events</a>
+   <a href="About.html">About</a>
+   <a href="#data">Login</a>
+  </nav>
+ </div>
+</header>
+<main id="top">
+<section class="ow"><div class="w">
+ <h1>Resources: evidence you can use</h1>
+ <p class="lede">Policy briefs, evidence syntheses, publications, regulatory documents, tools, case studies and training materials from across the network. Search, or filter by country, pillar, D2P step and language.</p>
+</div></section>
+
+<section class="sec" style="padding-top:2.5rem"><div class="w">
+ <h2 style="font-size:1.5rem">Browse by type</h2>
+ <div class="tiles" id="tiles"></div>
+ <form class="fbar" onsubmit="return false" role="search" aria-label="Filter resources">
+  <input class="q" id="q" type="search" placeholder="Search resources" aria-label="Search resources">
+  <select id="c" aria-label="Country"><option value="">All countries</option><option>Ethiopia</option><option>Rwanda</option><option>Zambia</option><option>Regional</option></select>
+  <select id="p" aria-label="Pillar"><option value="">All pillars</option><option>Data for Decision-Making</option><option>Evidence Generation and Synthesis</option><option>Evidence-to-Policy Translation</option><option>Health Policy and Regulation</option><option>Capacity Development</option><option>Digital Knowledge and Learning</option></select>
+  <select id="g" aria-label="D2P step"><option value="">All D2P steps</option><option>Data</option><option>Analysis</option><option>Evidence</option><option>Policy options</option><option>Policy dialogue</option><option>Decision or regulation</option><option>Implementation</option><option>Monitoring</option><option>Learning</option></select>
+  <select id="l" aria-label="Language"><option value="">All languages</option><option value="en">English</option><option value="fr">French</option><option value="pt">Portuguese</option><option value="ar">Arabic</option></select>
+  <select id="s" aria-label="Sort"><option value="n">Newest first</option><option value="a">A to Z</option></select>
+ </form>
+ <div class="bar2"><p id="cnt" role="status" style="margin:0;color:var(--muted)"></p><button type="button" id="rs">Reset filters</button></div>
+ <div class="rg" id="rg"></div>
+ <p class="note">The items shown are samples to demonstrate the layout and filters. Real publications will replace them.</p>
+</div></section>
+
+<div class="w"><div class="cta"><h2>Have an output to share?</h2><p>Country nodes and partners can submit policy briefs, syntheses, tools and case studies for the library.</p><a class="btn" href="#top">Contact the Secretariat</a><a class="btn o" href="OurWork.html">See our work</a></div></div>
+</main>
+<footer id="involved">
+ <div class="w">
+  <div class="f">
+   <div><h3>D2P Africa Hub</h3><p>Regional standards, national ownership. The Hub complements national systems and does not own national data.</p></div>
+   <div><h3>Explore</h3><a href="index.html">Home</a><a href="OurWork.html">Our Work</a><a href="CountryNodes.html">Country Nodes</a><a href="Resources.html">Resources</a><a href="About.html">About</a></div>
+   <div><h3>Get involved</h3><a href="#involved">Contact the Secretariat</a><a href="#involved">Partner with us</a><a href="#involved">Join as a country node</a><a href="#involved">Opportunities</a></div>
+   <div><h3>Legal</h3><a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Accessibility</a></div>
+  </div>
+  <p class="ow">&copy; D2P Africa Hub. All rights reserved.</p>
+ </div>
+</footer>
+<script>
+var D=[{"t": "Policy brief", "h": "Sample policy brief: strengthening routine data use", "s": "A plain-language brief with policy options for decision-makers.", "c": "Ethiopia", "p": "Data for Decision-Making", "g": "Policy options", "l": "en", "y": "2026"}, {"t": "Policy brief", "h": "Sample policy brief: options for medicines regulation", "s": "Policy options drawn from regulatory evidence.", "c": "Rwanda", "p": "Health Policy and Regulation", "g": "Policy dialogue", "l": "en", "y": "2026"}, {"t": "Evidence synthesis", "h": "Sample rapid review: evidence on immunization coverage", "s": "A rapid review of what the research says and what it means for countries.", "c": "Zambia", "p": "Evidence Generation and Synthesis", "g": "Evidence", "l": "en", "y": "2026"}, {"t": "Publication", "h": "Sample journal article: data use in national health systems", "s": "A peer-reviewed article from the network.", "c": "Regional", "p": "Data for Decision-Making", "g": "Analysis", "l": "en", "y": "2026"}, {"t": "Regulatory and policy document", "h": "Sample regulatory overview: country comparison", "s": "A comparison of regulatory approaches across nodes.", "c": "Regional", "p": "Health Policy and Regulation", "g": "Decision or regulation", "l": "en", "y": "2026"}, {"t": "Tool or guideline", "h": "Sample guideline: how to write a policy brief", "s": "A step-by-step guide used by all country nodes.", "c": "Regional", "p": "Evidence-to-Policy Translation", "g": "Policy options", "l": "en", "y": "2026"}, {"t": "Case study", "h": "Sample case study: lessons from a policy change", "s": "Lessons from putting a decision into practice.", "c": "Zambia", "p": "Health Policy and Regulation", "g": "Implementation", "l": "en", "y": "2026"}, {"t": "Training material", "h": "Sample course pack: introduction to evidence synthesis", "s": "Slides and exercises for training analysts.", "c": "Regional", "p": "Capacity Development", "g": "Learning", "l": "en", "y": "2026"}, {"t": "Case study", "h": "Sample case study: running a policy dialogue", "s": "How a node convened ministry and partners.", "c": "Ethiopia", "p": "Evidence-to-Policy Translation", "g": "Policy dialogue", "l": "fr", "y": "2026"}],TY=["Policy brief", "Evidence synthesis", "Publication", "Regulatory and policy document", "Tool or guideline", "Case study", "Training material"],sel='';
+var $=function(i){return document.getElementById(i)};
+var mb=$('mb'),nav=$('nav');
+mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+nav.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function tiles(){$('tiles').innerHTML=TY.map(function(t){var n=D.filter(function(d){return d.t===t}).length;return '<button type="button" class="tile" data-t="'+t+'" aria-pressed="'+(sel===t)+'"><b>'+t+'</b><span>'+n+' sample item'+(n==1?'':'s')+'</span></button>'}).join('')}
+function render(){
+ var q=$('q').value.toLowerCase(),c=$('c').value,p=$('p').value,g=$('g').value,l=$('l').value;
+ var r=D.filter(function(d){return(!sel||d.t===sel)&&(!c||d.c===c)&&(!p||d.p===p)&&(!g||d.g===g)&&(!l||d.l===l)&&(!q||(d.h+' '+d.s+' '+d.t).toLowerCase().indexOf(q)>-1)});
+ if($('s').value==='a')r.sort(function(a,b){return a.h.localeCompare(b.h)});
+ $('cnt').textContent=r.length+' resource'+(r.length==1?'':'s')+(sel?' in "'+sel+'"':'');
+ $('rg').innerHTML=r.length?r.map(function(d){return '<article class="rc"><p class="meta">'+d.t+' | '+d.y+'<span class="smp">Sample</span></p><h3>'+esc(d.h)+'</h3><p>'+esc(d.s)+'</p><div class="tg"><span>'+d.c+'</span><span>'+d.p+'</span><span>'+d.g+'</span><span>'+d.l.toUpperCase()+'</span></div><a href="#top">View resource</a></article>'}).join(''):'<p>No resources match your filters. Try resetting them.</p>';
+ tiles()}
+$('tiles').addEventListener('click',function(e){var b=e.target.closest('.tile');if(!b)return;sel=sel===b.dataset.t?'':b.dataset.t;render()});
+['q','c','p','g','l','s'].forEach(function(i){$(i).addEventListener('input',render)});
+$('rs').onclick=function(){sel='';['q','c','p','g','l'].forEach(function(i){$(i).value=''});$('s').value='n';render()};
+render();
+</script>
+</body>
+</html>
